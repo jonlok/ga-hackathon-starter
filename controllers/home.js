@@ -3,6 +3,11 @@
  * Home page.
  */
 exports.index = (req, res) => {
+  if (req.user) {
+    return res.render('account/loggedin',{
+      title: 'Loggedin'
+    });
+  }
   res.render('home', {
     title: 'Home'
   });

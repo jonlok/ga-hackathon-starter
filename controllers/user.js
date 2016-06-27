@@ -10,12 +10,15 @@ const User = require('../models/User');
  */
 exports.getLogin = (req, res) => {
   if (req.user) {
-    return res.redirect('/');
+    return res.render('account/loggedin',{
+      title: 'Loggedin'
+    });
   }
-  res.render('loggedin', {
-    title: 'LoggedIn'
+  res.render('account/login', {
+    title: 'LogIn'
   });
 };
+
 
 /**
  * POST /login
@@ -42,7 +45,10 @@ exports.postLogin = (req, res, next) => {
     req.logIn(user, (err) => {
       if (err) { return next(err); }
       req.flash('success', { msg: 'Success! You are logged in.' });
-      res.redirect(req.session.returnTo || '/');
+      // res.redirect(req.session.returnTo || '/');
+      res.render('account/loggedin', {
+          title: 'Loggedin'
+      });
     });
   })(req, res, next);
 };
