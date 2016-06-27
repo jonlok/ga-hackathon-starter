@@ -10,6 +10,14 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
+#c {
+  color: lightblue;
+}
+
+#k {
+  color: lightgreen;
+}
+
 body {
   margin: 0; }
 
@@ -62,8 +70,7 @@ dfn {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
-  color: green;}
+  margin: 0.67em 0; }
 
 mark {
   background: #ff0;

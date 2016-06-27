@@ -7,10 +7,12 @@
         span.icon-bar
         span.icon-bar
       a.navbar-brand(href='/')
-        i.fa.fa-cube
+        i.fa.fa-film
         | Kultura project
     .collapse.navbar-collapse
       ul.nav.navbar-nav
+        li(class=(title == 'About us') ? 'active' : undefined)
+          a(href='/about') About us
         li(class=(title == 'Home') ? 'active' : undefined)
           a(href='/') Home
         li(class=(title == 'API Examples') ? 'active' : undefined)

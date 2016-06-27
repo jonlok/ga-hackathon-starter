@@ -2,7 +2,7 @@ extends layout
 
 block content
   .page-header
-    h3 Contact Form
+    h2#c Contact Form
 
   form.form-horizontal(method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
@@ -20,6 +20,6 @@ block content
         textarea.form-control(name='message', id='message', rows='7')
     .form-group
       .col-sm-offset-2.col-sm-8
-        button.btn.btn-primary(type='submit')
-          i.fa.fa-envelope
+        button.btn.btn-primary.btn-block(type='submit')
+          i.fa.fa-space-shuttle
           | Send
