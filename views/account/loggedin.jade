@@ -6,11 +6,11 @@ block content
   p.lead A multi-user blog
   hr
   .row
-    .col-sm-6
-      textarea.form-control(rows='7')
-      button.btn.btn-success(type='submit')
-       i.fa.fa-plus-square-o(aria-hidden='true')
-         |   Store
-      p Content of the new cultural item
-  .foo  Foo
-  .bar  Bar
+      .col-sm-6
+        textarea#editor1.form-control(name='editor1', rows='10', cols='80')
+        script.
+          // Replace the <textarea id="editor1"> with a CKEditor
+          // instance, using default configuration.
+          CKEDITOR.replace( 'editor1' );
+        button.btn.btn-success(type='submit')
+          i.fa.fa-plus-square-o(aria-hidden='true')   Store
