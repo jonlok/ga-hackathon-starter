@@ -9,41 +9,6 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
-.lead {
-  color: orange;
-}
-#api {
-  color: pink;
-}
-#contact {
-  color: #85144b;
-}
-#about {
-  color: green;
-  background-color: #F012BE;
-  border-radius: 30px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-right: 2px;
-  border: dotted 2px blue;
-}
-#home {
-  color: yellow;
-  background-color: #F012BE;
-  border-radius: 30px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: dotted 2px blue;
-}
-#c {
-  color: lightblue;
-}
-#k {
-  color: lightgreen;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: bold;
-  font-variant: small-caps;
-}
 
 body {
   margin: 0; }
