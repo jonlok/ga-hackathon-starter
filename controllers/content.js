@@ -1,10 +1,5 @@
 const Content = require('../models/Content');
 
-/**
- * POST  /login (when initially signed-in) and at home page when logged-in
- * blog content
- */
-
 
 exports.postContent = (req, res) => {
 
@@ -20,7 +15,7 @@ exports.postContent = (req, res) => {
   content.save(function(err, newContent){
 
     if(err){
-      rew.json('error');
+      res.json('error');
     }
 
     res.json(newContent);
