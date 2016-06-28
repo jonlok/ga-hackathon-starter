@@ -40,7 +40,7 @@ const homeController = require('./controllers/home');
 const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
-// const contentController = require('./controllers/content');
+const contentController = require('./controllers/content');
 
 /**
  * API keys and Passport configuration.
@@ -117,9 +117,9 @@ app.post('/login', userController.postLogin);
  publishing or storing a blog post, using post method
 */
 /* home page when logged-in */
-// app.post('/', contentController.postContent);
+app.post('/', contentController.postContent);
 /* page entered at when initially logged in */
-// app.post('/login',contentController.postContent);
+app.post('/login',contentController.postContent);
 
 app.get('/logout', userController.logout);
 app.get('/forgot', userController.getForgot);
