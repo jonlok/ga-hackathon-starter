@@ -2,15 +2,34 @@ extends ../layout
 
 block content
   h1
-    center#k Kultura
-  p.lead A multi-user blog
+    em
+      center#k Kultura
+  p.lead.text-center A multi-user blog
   hr
   .row
       .col-sm-6
-        textarea#editor1.form-control(name='editor1', rows='10', cols='80')
+        strong Create your blog content here:
+        textarea#editor.form-control(name='editor', rows='10', cols='80', placeholder='Create your content here ...')
         script.
           // Replace the <textarea id="editor1"> with a CKEditor
           // instance, using default configuration.
-          CKEDITOR.replace( 'editor1' );
-        button.btn.btn-success(type='submit')
+          CKEDITOR.replace( 'editor' );
+  form
+      .form-group
+        label(for='InputTitle') Title
+        input#InputTitle.form-control(type='text', placeholder='Title', name='title')
+      .form-group
+        label(for='InputTag') Tag
+        input#InputTag.form-control(type='text', placeholder='Tag', name='tag')
+      .form-group
+        label(for='InputImage') Image input
+        input#InputImage(type='file', name='imagefile')
+        p.help-block
+
+      button.btn.btn-default(type='submit', name='publish') Publish
+        button.btn.btn-success(type='submit', name='store')
           i.fa.fa-plus-square-o(aria-hidden='true')   Store
+  hr
+  strong| Stored cultural items:
+  #newpost
+    | new post added here
