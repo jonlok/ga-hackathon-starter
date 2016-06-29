@@ -9,21 +9,21 @@ block content
   .row
       .col-sm-6
         strong Create your blog content here:
-        textarea#editor.form-control(name='editor', rows='10', cols='80', placeholder='Create your content here ...')
+        textarea#editor.form-control(name='editor', rows='10', cols='80', placeholder='Create your content here ...', method='post')
         script.
           // Replace the <textarea id="editor1"> with a CKEditor
           // instance, using default configuration.
           CKEDITOR.replace( 'editor' );
   form
       .form-group
-        label(for='InputTitle') Title
-        input#InputTitle.form-control(type='text', placeholder='Title', name='title')
+        label(for='inputTitle') Title
+        input#inputTitle.form-control(type='text', placeholder='Title', name='title', method='post')
       .form-group
-        label(for='InputTag') Tag
-        input#InputTag.form-control(type='text', placeholder='Tag', name='tag')
+        label(for='inputTag') Tag
+        input#inputTag.form-control(type='text', placeholder='Tag', name='tag', method='post')
       .form-group
-        label(for='InputImage') Image input
-        input#InputImage(type='file', name='imagefile')
+        label(for='inputImage') Image input
+        input#inputImage(type='file', name='imagefile', method='post')
         p.help-block
 
       button.btn.btn-default(type='submit', name='publish') Publish
@@ -34,4 +34,6 @@ block content
   #newpost
     ul
       each val in content
-        li= val.title
+        li= 'title: ' + val.title
+        li= 'body: ' + val.body
+        li= 'tag: #' + val.tag
