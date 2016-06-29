@@ -1,15 +1,24 @@
+const Content = require('../models/Content');
+
 /**
  * GET /
  * Home page.
  */
 exports.index = (req, res) => {
-  if (req.user) {
-    return res.render('account/loggedin',{
-      title: 'Loggedin'
+
+  Content.find({}, function(err, content){
+
+    if (req.user) {
+      return res.render('account/loggedin',{
+        title: 'Loggedin',
+        content: content
+      });
+    }
+    res.render('home', {
+      title: 'Home',
+      content: content
     });
-  }
-  res.render('home', {
-    title: 'Home'
+
   });
 };
 
