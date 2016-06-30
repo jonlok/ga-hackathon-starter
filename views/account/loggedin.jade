@@ -35,11 +35,11 @@ block content
       i.fa.fa-plus-square-o(aria-hidden='true')   Store
   hr
   strong| Stored cultural items:
-    ul
+    ul.list-group
       each val in content
-        li= 'title: ' + val.title
-        li= 'body: ' + val.body
-        li= 'tag: #' + val.tag
+        li.list-group-item= 'title: ' + val.title
+        li.list-group-item= 'body: ' + val.body
+        li.list-group-item= 'tag: #' + val.tag
 
 
 
