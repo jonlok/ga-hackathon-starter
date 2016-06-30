@@ -6,14 +6,8 @@ block content
       center#k Kultura
   p.lead.text-center A multi-user blog
   hr
-  .row
-      .col-sm-6
-        strong Create your blog content here:
-        textarea#editor.form-control(name='editor', rows='10', cols='80', placeholder='Create your content here ...', method='post', action='/')
-        script.
-          // Replace the <textarea id="editor1"> with a CKEditor
-          // instance, using default configuration.
-          CKEDITOR.replace( 'editor' );
+
+
   form(method='post', action='/')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group
@@ -26,8 +20,9 @@ block content
       label(for='inputImage') Image input
       input#inputImage(type='file', name='imagefile')
       p.help-block
-    button.btn.btn-default(type='submit', name='publish')
-      | Publish
+    .form-group
+      label(for='editor') Body of blog post
+      input#editor.form-control(type='text', name='editor', placeholder='Create your content here ...')
     button.btn.btn-success(type='submit', name='store')
       i.fa.fa-plus-square-o(aria-hidden='true')   Store
   hr
@@ -38,4 +33,4 @@ block content
         li= 'title: ' + val.title
         li= 'body: ' + val.body
         li= 'tag: #' + val.tag
-        li= val
+
