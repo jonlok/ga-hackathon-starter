@@ -111,6 +111,8 @@ app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }))
 app.get('/', homeController.index);
 app.post('/', homeController.postContent);
 
+// app.get('/myposts', homeController.myposts);
+
 
 app.get('/about', homeController.about);
 app.get('/contact', contactController.getContact);

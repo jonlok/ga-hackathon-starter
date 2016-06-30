@@ -1,6 +1,14 @@
 extends ../layout
 
 block content
+  ul.nav.nav-pills(role='tablist')
+      li.active(role='presentation')
+        a(href='#')
+          | My posts
+          span.badge
+      li(role='presentation')
+        a(href='/account') Profile
+
   h1
     em
       center#k Kultura
@@ -27,11 +35,11 @@ block content
       i.fa.fa-plus-square-o(aria-hidden='true')   Store
   hr
   strong| Stored cultural items:
-  #newpost
     ul
       each val in content
         li= 'title: ' + val.title
         li= 'body: ' + val.body
         li= 'tag: #' + val.tag
-        //- li= 'user: ' + val.user
+
+
 

@@ -64,6 +64,13 @@ exports.postContent = (req, res) => {
 
 };
 
+// exports.myposts = (req, res) => {
+//   res.render('myposts', {
+//     title: 'My posts'
+//   });
+
+// }
+
 
 
 
