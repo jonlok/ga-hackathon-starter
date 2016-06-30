@@ -56,7 +56,7 @@ exports.postContent = (req, res) => {
       res.json('error');
     }
 
-    res.json(newContent);
+    res.redirect("/");
 
 
   });
