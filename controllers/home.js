@@ -64,12 +64,18 @@ exports.postContent = (req, res) => {
 
 };
 
-// exports.myposts = (req, res) => {
-//   res.render('myposts', {
-//     title: 'My posts'
-//   });
+exports.myposts = (req, res) => {
 
-// }
+   Content.find({}, function(err, content){
+
+  res.render('myposts', {
+    title: 'My posts',
+    content: content
+  });
+
+  });
+
+};
 
 
 

@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  ul.nav.nav-pills(role='tablist')
+      li.active(role='presentation')
+        a(href='/myposts')
+          | My posts
+          span.badge
+      li(role='presentation')
+        a(href='/account') Profile
+  hr
+
+  | My posts:
+
+  ul.list-group
+      each val in content
+        li.list-group-item= 'title: ' + val.title
+        li.list-group-item= 'body: ' + val.body
+        li.list-group-item= 'tag: #' + val.tag
